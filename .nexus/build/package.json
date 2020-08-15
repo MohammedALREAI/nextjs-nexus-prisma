@@ -1,0 +1,36 @@
+{
+  "name": "next-nexus-todo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "nexus:reflection": "nexus dev --reflection --entrypoint pages/api/graphql.ts",
+    "nexus:check": "nexus build --entrypoint pages/api/graphql.ts && nexus build --entrypoint pages/api/playground.ts",
+    "test": "next build",
+    "dev": "next dev",
+    "start": "next start",
+    "build": "next build",
+    "deploy:preview": "now",
+    "deploy:prod": "now --prod",
+    "p:save": "npx prisma migrate save --experimental",
+    "p:up": "npx prisma migrate up --experimental",
+    "p:studio": "npx prisma studio --experimental",
+    "p:generate": "npx prisma generate",
+    "p:generate:watch": "npx prisma generate --watch"
+  },
+  "dependencies": {
+    "next": "^9.5.2",
+    "nexus": "^0.27.0-next.4",
+    "nexus-plugin-prisma": "^0.17.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "@prisma-labs/prettier-config": "0.1.0",
+    "@prisma/cli": "^2.4.1",
+    "@types/node": "13.13.10",
+    "@types/react": "16.9.34",
+    "prettier": "2.0.5",
+    "typescript": "3.9.6"
+  },
+  "prettier": "@prisma-labs/prettier-config"
+}

@@ -1,0 +1,15 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "DeleteField",
+      "model": "Faq",
+      "field": "createdAt"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Faq",
+      "field": "updatedAt"
+    }
+  ]
+}
